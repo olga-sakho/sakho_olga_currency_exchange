@@ -1,0 +1,27 @@
+{
+  "name": "currency_exchange",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.1",
+    "pug": "^3.0.2",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olga-sakho/sakho_olga_currency_exchange.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olga-sakho/sakho_olga_currency_exchange/issues"
+  },
+  "homepage": "https://github.com/olga-sakho/sakho_olga_currency_exchange#readme"
+}
