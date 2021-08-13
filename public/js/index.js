@@ -72,7 +72,7 @@ $( document ).ready(function() {
 					var selected2 = $(".buyOption:selected")
 	  				var result = ($('.sellInput').val() * $(selected1).val())/$(selected2).val() 
 	  				console.log($('.sellInput').val(), $(selected1).val(), $(selected2).val())
-						$('.buyInput').val(Math.round(result))
+						$('.buyInput').val(result.toFixed(2))
 				}
 
 				$('.sell').on('change', changeFunction) 
