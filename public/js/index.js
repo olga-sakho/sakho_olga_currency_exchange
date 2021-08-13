@@ -54,21 +54,33 @@ $( document ).ready(function() {
 					
 					
 				})
-			})
-				$( ".sell" ).change(function() {
-					$( ".buy" ).change(function() {
-						var selected1 = $(".sellOption:selected")
-						var selected2 = $(".buyOption:selected")
-		  				var result = ($('.sellInput').val() * $(selected1).val())/$(selected2).val() 
-		  				console.log($('.sellInput').val(), $(selected1).val(), $(selected2).val())
-		  				console.log(result)
-		  				$('.buyInput').val(result)
-		  			})	
+			})	
+				$('.sell').change(function() {
+							$('.sellInput').on('input', function() {
+								$('.buy').click(function() {
+										var selected1 = $(".sellOption:selected")
+										var selected2 = $(".buyOption:selected")
+						  				var result = ($('.sellInput').val() * $(selected1).val())/$(selected2).val() 
+						  				console.log($('.sellInput').val(), $(selected1).val(), $(selected2).val())
+											$('.buyInput').val(Math.round(result))
+								})
+							})	
 				})
-			
-			})	  
+
+				function changeFunction () {
+					var selected1 = $(".sellOption:selected")
+					var selected2 = $(".buyOption:selected")
+	  				var result = ($('.sellInput').val() * $(selected1).val())/$(selected2).val() 
+	  				console.log($('.sellInput').val(), $(selected1).val(), $(selected2).val())
+						$('.buyInput').val(Math.round(result))
+				}
+
+				$('.sell').on('change', changeFunction) 
+					$('.sellInput').on('input', changeFunction)
+						$('.buy').on('change',changeFunction)
+
 		})
 
-	
+	})
 
 })
